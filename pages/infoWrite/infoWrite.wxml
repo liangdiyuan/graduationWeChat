@@ -1,0 +1,78 @@
+<view class="page">
+    <view class="page__bd">
+        <form bindsubmit="submitForm">
+            <view class="weui-cells">
+
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label" >用户名：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" value="{{myInfo.name}}" name="userName" 
+                        placeholder="请输入您的用户名（必填）" />
+                    </view>
+                </view>
+                <radio-group class="weui-cell radio-group" bindchange="radioChange">
+
+                    <view class="weui-cell__bd">
+                        <view class="weui-label">性别：</view>
+                        <view>
+                            <view wx:for="{{sexList}}" wx:for-index="index" wx:key="index">
+                                <radio color="#00a0ea" value="{{index}}" 
+                                checked="{{sexList[index].selection}}"/>
+                                {{sexList[index].name}}
+                            </view>
+                        </view>
+                    </view>
+                 </radio-group>
+
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">身份证：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input name='idCardNum' class="weui-input" value="{{myInfo.id_card_num}}"
+                        placeholder="请输入身份证号码（必填）" />
+                    </view>
+                </view>
+
+               
+                <!-- 选择城市 -->
+                <picker class="weui-cell" mode="region" bindchange="bindRegionChange" value="{{region}}">
+                    <view class="periplast">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">现住城市：</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="weui-cell-text"> {{region[0]}}，{{region[1]}}，{{region[2]}} </view>
+                        </view>
+                    </view>
+                </picker>
+
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">详细地址：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" name='detailedAddr' value="{{streetNumber}}" 
+                        placeholder="请输入详细地址" />
+                    </view>
+                </view>
+                
+                <view class="weui-cell">
+                    <view class="weui-cell__bd">
+                        <textarea class="weui-textarea" bindinput="getTextarea" 
+                            value="{{myInfo.described}}" 
+                            placeholder="个人简介，可提高聘用率" 
+                            style="height: 3.3em" />
+                        <view class="weui-textarea-counter">{{resume.length}}/200</view>
+                    </view>
+                </view>
+            </view>
+
+            <view class="weui-btn-area">
+                <button class="weui-btn button" formType="submit">提交</button>
+            </view>
+        </form>
+    </view>
+</view>

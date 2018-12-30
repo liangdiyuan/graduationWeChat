@@ -1,0 +1,15 @@
+/* pages/skillList/skillList.wxss */
+.page_hd{
+    padding: 10rpx 30rpx;
+}
+
+.page_hd > view{
+    color: rgb(102, 102, 102);
+    font-size: 16px;
+}
+
+.page__bd{
+    height: 87%;
+    overflow-y: auto;
+}
+

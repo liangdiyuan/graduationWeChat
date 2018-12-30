@@ -1,0 +1,76 @@
+<view class="page">
+  <view class="page__bd">
+
+    <view class='head'>
+      <view class='userinfo'>
+        <block>
+          <view class="userinfo-avatar" catch:tap="login">
+            <open-data type="userAvatarUrl"/>
+          </view>
+          <view wx:if="{{!isLogin}}" class="userinfo-nickname">
+            点击头像授权登录
+          </view>
+          <view wx:else class="userinfo-nickname">{{userName}}</view>
+        </block>
+      </view>
+    </view>
+
+    <view class='main'>
+        <view wx:if="{{isLogin && isRepairman}}" class='content weui-panel__bd'>
+          <navigator url="../mySkill/mySkill" class="weui-cell weui-cell_access" 
+            hover-class="weui-cell_active">
+            <view class="weui-cell__bd">我的技能</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+              <view style="display: inline-block;vertical-align:middle; font-size: 16px;">
+                查看
+              </view>
+            </view>
+          </navigator>
+        </view>
+        <view wx:elif="{{!isLogin}}" class='content weui-panel__bd'>
+          <navigator url="../register/register?userType=0" class="weui-cell weui-cell_access"
+            hover-class="weui-cell_active">
+            <view class="weui-cell__bd">我是师傅</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+              <view style="display: inline-block;vertical-align:middle; font-size: 14px;">
+                立即入住
+              </view>
+            </view>
+          </navigator>
+        </view>
+
+      <view class='content weui-panel__bd'>
+
+        <view type="default" bindtap="open" class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>联系客服</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+
+        <navigator url="" class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>留言反馈</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+
+      </view>
+
+      <view class='content weui-panel__bd'>
+        <navigator url="" class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>关于我们</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+      </view>
+
+      <!-- <view class="weui-btn-area">
+          <button type="default" bindtap="open">注销</button>
+      </view> -->
+
+    </view>
+
+  </view>
+</view>

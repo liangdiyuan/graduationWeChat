@@ -1,0 +1,62 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-cells">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    用户名：
+                </view>
+                <view class="weui-cell__ft">
+                    <view class="">{{userInfo.name}}</view>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    性别：
+                </view>
+                <view class="weui-cell__ft">
+                    <view>{{userInfo.sex}}</view>
+                </view>
+            </view>
+             <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    地区：
+                </view>
+                <view class="weui-cell__ft">
+                    <view class="">{{userInfo.area.province}}，{{userInfo.area.city}}</view>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    手机号：
+                </view>
+                <view class="weui-cell__ft">
+                    <view class="">{{userInfo.phone}}</view>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    证件号：
+                </view>
+                <view class="weui-cell__ft">
+                    <view class="">{{userInfo.id_card_num}}</view>
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-cells">
+            <navigator url="../certification/certification" class="weui-cell weui-cell_access" 
+                hover-class="weui-cell_active">
+                <view class="weui-cell__bd">实名认证</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+                    <view style="display: inline-block;vertical-align:middle; font-size: 14px;">
+                        {{tail}}
+                    </view>
+                </view>
+            </navigator>
+        </view>
+
+        <view class="weui-btn-area">
+            <image class="" src="../../images/xiugai.png"  bind:tap="alterInfo" mode="scaleToFill"/>
+        </view>
+    </view>
+</view>

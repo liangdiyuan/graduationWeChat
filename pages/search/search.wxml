@@ -1,0 +1,55 @@
+<view class="page">
+  <view class="page__hd">
+  </view>
+  <view class="page__bd">
+    <view class="weui-search-bar">
+
+      <view class="weui-search-bar__form">
+
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" 
+          focus="{{inputShowed}}" bindinput="inputTyping" />
+        </view>
+
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+
+    </view>
+
+    <view class="weui-cells searchbar-result weui-cells_after-title " wx:if="{{inputVal.length == 0}}">
+      <view class='popular'>
+        <view>
+           <text class='title'>热门搜素</text>
+        </view>
+
+        <view class='content' catch:tap="getClick">
+          <view class='text' wx:for="{{popular}}" data-id="{{index}}" wx:key="index">
+            {{item}}
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0 && !showTisp}}">
+      <navigator url="../logs/logs?skill_id={{item.id}}" class="weui-cell" hover-class="weui-cell_active" 
+        wx:for="{{resData}}" wx:key="item.id" hover-stop-propagation="true">
+        <view class="weui-cell__bd">
+          {{item.name}}
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+    <view class="tips weui-cells" wx:elif="{{inputVal.length > 0 && showTisp}}">
+        <view class="weui-cell">
+          <text>未找到</text>
+          <text class="overstriking"> {{inputVal}} </text>
+          <text>相关的服务</text>
+        </view>
+    </view>
+  </view>
+</view>

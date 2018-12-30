@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "请选择你的技能",
+    "usingComponents": {
+        "buttons": "/components/Buttons/buttons",
+        "checkbox-list": "/components/CheckboxList/checkboxList"
+    }
+    
+}

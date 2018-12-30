@@ -1,0 +1,36 @@
+<!--pages/repairmanInfo/repairmanInfo.wxml-->
+<view class="page">
+    <view class="page__bd" wx:if="{{RepairmanInfo.length != 0}}">
+        <view class="head weui-cells weui-cells_after-title">
+            <view class="head-img">
+                <image style="width: 128rpx; height: 128rpx" 
+                    mode="aspectFill" src="{{RepairmanInfo.imgurl || defaultImage}}" />
+            </view>
+            <view class="name">
+                <view>
+                    {{RepairmanInfo.name}}
+                </view>
+                <image src="{{RepairmanInfo.sex == '男' ? '../../images/nan.png' : '../../images/nv.png'}}" 
+                    style="width: 50rpx; height: 50rpx" 
+                    mode="aspectFill" />
+            </view>
+            <view class="address">
+                <text decode="{{true}}"> {{RepairmanInfo.area.province}} &nbsp;&nbsp; </text>
+                <text decode="{{true}}"> {{RepairmanInfo.area.city}} &nbsp;&nbsp; </text>
+                <text decode="{{true}}"> {{RepairmanInfo.area.area_name}} </text>
+            </view>
+        </view>
+
+        <view class="weui-cells__title">我的技能：</view>
+        <view class="centre weui-cells weui-cells_after-title">
+            <view class="weui-cell" wx:for="{{RepairmanInfo.skill_list}}" wx:key="index">
+                <view class="weui-cell__bd">{{item.skill.name}}</view>
+                <view class="weui-cell__ft" wx:if="{{item.service_flag == '1' }}"> 提供上门维修 </view>
+            </view>
+        </view>
+
+         <buttons id="buttons" upper="{{upper.name}}" lower="联系"
+         data-phone="{{RepairmanInfo.phone}}" data-id="{{id}}" 
+         bind:lower="lower" bind:upper="upper"/>
+    </view>
+</view>

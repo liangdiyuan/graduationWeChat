@@ -1,0 +1,3 @@
+/* components/CheckboxList/checkboxList.wxss */
+@import "../../weui.wxss";
+

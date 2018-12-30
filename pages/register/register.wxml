@@ -1,0 +1,57 @@
+<view class="page">
+  <view class="page__bd">
+    <form bindsubmit="submitForm">
+      <view class="weui-cells">
+
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">账号类型</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker bindchange="getUserType" name="userType" value="{{defaultUserType}}" range="{{accounts}}">
+              <view class="weui-select">{{accounts[defaultUserType]}}</view>
+            </picker>
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">手机号</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name='phone' bindinput='getPhone' placeholder="请输入手机号" />
+          </view>
+          <view class="weui-cell__ft">
+            <view class="weui-vcode-btn" bindtap="modalinput">获取验证码</view>
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input ">
+          <view class="weui-cell__hd">
+            <view class="weui-label">短信验证码</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name="messageCode" placeholder="请输入短信验证码" />
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-btn-area">
+        <button class="weui-btn button" formType="submit" >注册</button>
+      </view>
+
+      <modal hidden="{{hiddenmodalput}}" title="{{tips}}" confirm-text="提交" 
+        qcancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__bd">
+            <input class="weui-input" bindinput="getVerificationCode" value='{{code}}'
+             placeholder="请输入验证码" />
+          </view>
+          <view class="weui-cell__ft">
+            <image class="weui-vcode-img" bindtap='switchCode' src="{{image}}" style="width: 108px"></image>
+          </view>
+        </view>
+      </modal>
+    </form>
+  </view>
+</view>

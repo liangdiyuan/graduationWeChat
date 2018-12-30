@@ -1,0 +1,61 @@
+
+.popular{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.title::before{
+  content: "";
+  display: block;
+}
+.title {
+  display: block;
+  padding: 20rpx 50rpx;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.text{
+  font-size: 14px;
+  margin: 20rpx;
+  padding: 10rpx 20rpx;
+  background-color: rgb(238, 238, 238);
+  border-radius: 10px;
+}
+
+.content{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 10rpx;
+}
+
+.tips > view{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+
+.tips{
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+
+.tips text{
+  font-size: 16px;
+  color: #aaa;
+}
+
+.tips text.overstriking{
+  font-weight:600;
+  color: #333;
+}
+
+

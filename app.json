@@ -1,0 +1,58 @@
+{
+  "pages":[
+    "pages/mine/mine",
+    "pages/search/search",
+    "pages/repairmanInfo/repairmanInfo",
+   
+    "pages/certification/certification",
+    "pages/infoWrite/infoWrite",
+    "pages/register/register",
+    
+    
+    "pages/infoRead/infoRead",
+   
+    "pages/logs/logs",
+   
+    "pages/mySkill/mySkill",
+
+    "pages/index/index",
+    "pages/skillCategoryList/skillCategoryList",
+    "pages/serviceFlag/serviceFlag",
+    "pages/error/error",
+    "pages/skillList/skillList"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#00a0ea",
+    "navigationBarTitleText": "便民维修",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#00a0ea",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "selectedIconPath": "images/sousuo_2.png",
+        "iconPath": "images/sousuo_1.png",
+        "pagePath": "pages/search/search",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/tongxunlu.png",
+        "iconPath": "images/tongxunlu_1.png",
+        "pagePath": "pages/index/index",
+        "text": "通讯录"
+      },
+      {
+        "selectedIconPath": "images/wode_2.png",
+        "iconPath": "images/wode_1.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  }
+  
+}

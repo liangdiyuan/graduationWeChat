@@ -1,0 +1,22 @@
+.my-checkbox{
+    display: inherit;
+}
+
+
+.weui-btn-area{
+    position: fixed;
+    border-radius: 50%;
+    width: 90rpx;
+    height: 90rpx;
+    right: 10%;
+    bottom: 10%;
+    margin: 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.weui-btn-area > image{
+    width: 90rpx;
+    height: 90rpx;
+   
+}

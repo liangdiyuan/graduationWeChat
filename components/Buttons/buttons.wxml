@@ -1,0 +1,5 @@
+<!--components/Button/buttons.wxml-->
+<view class="bottom">
+    <view class="upper" bindtap="_upper" wx:if="{{showupper}}">{{upper}}</view>
+    <view class="lower" bindtap="_lower" wx:if="{{showlower}}">{{lower}}</view>
+</view>

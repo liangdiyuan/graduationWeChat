@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "请选择哪个服务提供上门服务",
+    "usingComponents": {
+        "buttons": "/components/Buttons/buttons",
+        "checkbox-list": "/components/CheckboxList/checkboxList"
+    }
+    
+}

@@ -1,0 +1,32 @@
+<view class="page">
+  <view class="page-bd">
+    <view class="mian">
+      <navigator class="content" wx:for="{{RepairmanList}}" wx:key="item.id"
+       url="../repairmanInfo/repairmanInfo?id={{item.repairman.id}}">
+        <view class="left">
+          <image lazy-load="true" style="width:150rpx; height:150rpx" 
+          mode="aspectFill" src="{{item.repairman.imgurl || defaultImage}}" />
+        </view>
+        <view class="center">
+          <view class="ellipsis">{{item.repairman.name}}</view>
+          <view class="ellipsis" wx:if="{{item.service_flag == 1}}">可上门服务</view>
+          <view class="ellipsis">地址：{{item.repairman.area.province}},
+            {{item.repairman.area.city}}, 
+            {{item.repairman.area.area_name}}
+          </view>
+        </view>
+        <view class="right">
+            <image style="width: 40px; height: 30px;" data-phone="{{item.repairman.phone}}"
+              src="../../images/bohao.png" mode="aspectFill" catchtap="phone"/>
+        </view>
+      </navigator>
+    </view>
+    <view class="weui-loadmore" hidden="{{showLoadmore}}">
+        <view class="weui-loading"></view>
+        <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+    <view class="weui-loadmore weui-loadmore_line" wx:if="{{count <= pageIndex}}">
+        <view class="weui-loadmore__tips weui-loadmore__tips_in-line">已到尽头</view>
+    </view>
+  </view>
+</view>

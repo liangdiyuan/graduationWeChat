@@ -1,0 +1,10 @@
+<view class="page">
+    <view class="page_hd">
+        <view>请选择哪个服务提供上门服务</view>
+    </view>
+    <view class="page__bd">
+        <checkbox-list list="{{checkboxItems}}" bind:change="checkboxChange"/>
+    </view>
+
+    <buttons id="buttons" lower="提交" bind:lower="lower" bind:upper="upper" />
+</view>

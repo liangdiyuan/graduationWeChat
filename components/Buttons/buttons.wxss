@@ -1,0 +1,37 @@
+/* components/Button/buttons.wxss */
+.upper
+.lower{
+    border: 0;
+    overflow: hidden;
+  }
+  
+  .upper{
+      border-right: 0.5px solid #eff2f3;
+  }
+  .lower{
+      color: #00a0ea;
+      border-left: 0.5px solid #eff2f3;
+  }
+  .lower:active,
+  .upper:active{
+      background-color: #eff2f3;
+  }
+  
+  .bottom{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #ced0d1;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+    background-color: #fff;
+  }
+  
+  .bottom > view{
+    text-align: center;
+    flex: 1;
+    margin: 0;
+    padding: 20rpx;
+  }

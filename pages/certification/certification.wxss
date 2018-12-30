@@ -1,0 +1,61 @@
+.page__bd{
+  align-content: center;
+  
+}
+
+.weui-uploader{
+  margin: 100rpx;
+  border: 1px solid #00a0ea;
+  box-sizing: border-box;
+  border-radius: 14px;
+  background-color: #fff;
+  padding: 0;
+  overflow: hidden;
+}
+
+text.weui-input{
+  font-size: 16px;
+  display: inline-block;
+  width: 500rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+ 
+}
+
+.weui-uploader-file{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300rpx;
+  overflow: hidden;
+}
+
+.weui-uploader-file > view,
+.weui-uploader-img{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+.weui-uploader-file > view{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.weui-uploader-input > image{
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.weui-uploader-input .text{
+  font-size: 16px;
+  color: #00a0ea;
+   
+}

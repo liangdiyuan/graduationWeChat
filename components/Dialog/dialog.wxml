@@ -1,0 +1,17 @@
+<view class="page" wx:if="{{showdialog}}">
+   <view class='wx-mask'></view>
+    <view class="wx-dialog">
+        <view class="wx-dialog-title" wx:if="{{title}}">{{title}}</view>
+        <view class="wx-dialog-content">
+            <radio-group class="wx-dialog-radio-group" bindchange="radioChange">
+                <label class="wx-dialog-radio" hover-class="action" hover-stop-propagation="false"
+                 wx:for="{{list}}" wx:key="index">
+                    <view>
+                        {{item.name}}
+                    </view>
+                    <radio value="{{item.id}}" checked="{{item.checked}}" color="#00a0ea"/>
+                 </label>
+            </radio-group>
+        </view>
+    </view>
+</view>

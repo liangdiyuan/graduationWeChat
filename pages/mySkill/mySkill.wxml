@@ -1,0 +1,23 @@
+<view class="page">
+     <view class="page_hd">
+        <view>我的技能</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-cells weui-cells_after-title" bind:tap="alterSkill">
+            <view class="weui-cell weui-cell_access" wx:for="{{skillList}}" wx:key="item.id"
+                data-index="{{index}}" hover-class="weui-cell_active">
+                <view data-index="{{index}}" class="weui-cell__bd">{{item.skill.name}}</view>
+                <view data-index="{{index}}" class="weui-cell__ft weui-cell__ft_in-access">
+                    {{item.flag === "1" ? "已上架" : "已下架"}}
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="weui-btn-area">
+        <image class="" src="../../images/tianjia.png"  bind:tap="addSkill" mode="scaleToFill"/>
+    </view>
+    <modal hidden="{{hiddenmodalput}}" title="是否" confirm-text="修改" cancel-text="取消" 
+        bindcancel="cancel" bindconfirm="confirm">
+        <checkbox-list my-class="my-checkbox" list="{{checkboxItems}}" bind:change="checkboxChange"/>
+    </modal>
+</view>

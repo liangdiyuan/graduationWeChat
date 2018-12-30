@@ -1,0 +1,11 @@
+<view class="page">
+    <view class="page_hd">
+        <view>请选择你的技能</view>
+    </view>
+    <view class="page__bd">
+        <checkbox-list list="{{checkboxItems}}" bind:change="checkboxChange"/>
+    </view>
+
+    <buttons id="buttons" bind:lower="lower" bind:upper="upper" />
+    <!-- <dialog id="dialog" list="{{list}}" title="是否提供上门服务" showdialog="{{show}}" bind:change="change"/> -->
+</view>

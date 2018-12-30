@@ -1,0 +1,9 @@
+<view class="page">
+    <view class="page_hd">
+        <view>请选择你的技能类型</view>
+    </view>
+    <view class="page__bd">
+        <checkbox-list list="{{checkboxItems}}" bind:change="checkboxChange"/>
+    </view>
+    <buttons id="buttons" bind:lower="lower" showupper="{{false}}" />
+</view>

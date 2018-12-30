@@ -1,0 +1,62 @@
+@import "weui.wxss";
+
+.page_hd{
+  padding:10rpx 30rpx;
+  background-color: #fff;
+}
+
+.page_hd > view{
+  text-align: center;
+  font-size:16px;
+  color:rgb(102, 102, 102);
+}
+
+text,
+view.ellipsis{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.page{
+  background-color: #f8f8f8;
+  height: 100%;
+  width: 100%;
+}
+view::-webkit-scrollbar,
+.page__bd::-webkit-scrollbar{
+  border: none;
+  background-color: transparent;
+  width: 1px;
+}
+
+.page__bd{
+  background-color: #f8f8f8;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+form{
+  width: 100%;
+  height: 100%;
+}
+
+.button{
+  background-color: #00a0ea;
+  color: #fff;
+}
+
+
+

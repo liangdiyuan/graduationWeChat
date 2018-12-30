@@ -1,0 +1,17 @@
+<!--components/CheckboxList/checkboxList.wxml-->
+ <view class="weui-cells weui-cells_after-title my-class">
+    <checkbox-group bindchange="change">
+        <label class="weui-cell weui-check__label" wx:for="{{list}}" wx:key="item.id">
+            <checkbox class="weui-check" value="{{item.id}}" checked="{{item.checked}}"/>
+            <view class="weui-cell__bd">{{item.name}}</view>
+            <view class="weui-cell__ft">
+                <view class="weui-cell__hd weui-check__hd_in-checkbox">
+                    <icon class="weui-icon-checkbox_circle" type="circle" size="23" 
+                    wx:if="{{!item.checked}}"></icon>
+                    <icon color="#00a0ea" class="weui-icon-checkbox_success" type="success" size="23" 
+                    wx:if="{{item.checked}}"></icon>
+                </view>
+            </view>
+        </label>
+    </checkbox-group>
+</view>

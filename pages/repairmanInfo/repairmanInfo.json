@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "详细信息",
+    "usingComponents": {
+        "buttons": "/components/Buttons/buttons"
+    }
+}
